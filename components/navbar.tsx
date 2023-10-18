@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const routes = [
   {
@@ -15,15 +16,25 @@ const routes = [
     href: "/sluzby",
   },
 ];
+
+const variants = {
+  open: { scale: 1, opacity: 1 },
+  closed: { scale: 0, opacity: 0 },
+};
+
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
   const pathname = usePathname();
   return (
     <header className="transparent md:sticky top-0 z-30 ">
       <nav className="">
-        <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4 pt-6">
-          <div className="p-3 bg-white rounded-full shadow-2xl">
-            <Link href="/">
+        <div className="flex flex-wrap items-center justify-between p-4 pt-6">
+          <Link href="/">
+            <motion.div
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 1.1 }}
+              className="p-3 bg-white rounded-full shadow-2xl"
+            >
               <Image
                 height="38"
                 width="38"
@@ -31,14 +42,16 @@ export default function Navbar() {
                 className="rounded-full"
                 alt="DRIE Logo"
               />
-            </Link>
-          </div>
+            </motion.div>
+          </Link>
           <div className="relative">
-            <button
+            <motion.button
+              whileHover={{ scale: 0.9 }}
+              whileTap={{ scale: 1.1 }}
               onClick={() => setNavbar(!navbar)}
               data-collapse-toggle="navbar-cta"
               type="button"
-              className="flex bg-white p-3 shadow-2xl rounded-full items-center justify-center text-sm focus:outline-none  text-gray-400 hover:bg-white/10 "
+              className="flex bg-white p-3 shadow-2xl rounded-full items-center justify-center text-sm focus:outline-none  text-gray-400 hover:bg-gray-50 "
               aria-controls="navbar-cta"
               aria-expanded="false"
             >
@@ -74,20 +87,28 @@ export default function Navbar() {
                   />
                 </svg>
               )}
-            </button>
-            <div
-              className={`absolute p-4 bg-white shadow-xl rounded-2xl right-0 mt-3 ${
-                navbar ? "flex-col" : "hidden"
-              }`}
+            </motion.button>
+            <motion.div
+              animate={navbar ? "open" : "closed"}
+              variants={variants}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+              }}
             >
-              {routes.map((route) => (
-                <Link href={route.href}>
-                  <div className=" px-20 py-4 rounded-2xl bg-white hover:bg-gray-50">
-                    {route.label}
-                  </div>
-                </Link>
-              ))}
-            </div>
+              <div
+                className={`absolute p-4 bg-white shadow-xl rounded-2xl right-0 mt-3 `}
+              >
+                {routes.map((route) => (
+                  <Link href={route.href}>
+                    <div className=" px-20 py-4 rounded-2xl bg-white hover:bg-gray-50">
+                      {route.label}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </nav>

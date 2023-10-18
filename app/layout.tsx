@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-100`}>
-        <section className="h-full">
+        <section className="h-full max-w-screen-lg mx-auto">
           <Navbar />
           {children}
         </section>
