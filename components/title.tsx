@@ -8,7 +8,7 @@ export default function Title() {
           Hi, I'm Miroslav.
         </h1>
         <p className=" text-sm md:text-base text-gray-500 tracking-wide">
-          I am FullStack Developer. I develop{" "}
+          I am FullStack Developer. I develop.
         </p>
       </div>
     </div>
