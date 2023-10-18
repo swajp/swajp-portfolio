@@ -14,14 +14,6 @@ const routes = [
     label: "Služby",
     href: "/sluzby",
   },
-  {
-    label: "O nás",
-    href: "/o-nas",
-  },
-  {
-    label: "Reference",
-    href: "/reference",
-  },
 ];
 export default function Navbar() {
   const [navbar, setNavbar] = useState(false);
@@ -29,7 +21,7 @@ export default function Navbar() {
   return (
     <header className="transparent md:sticky top-0 z-30 ">
       <nav className="">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4 pt-6">
           <div className="p-3 bg-white rounded-full shadow-2xl">
             <Link href="/">
               <Image
@@ -41,12 +33,12 @@ export default function Navbar() {
               />
             </Link>
           </div>
-          <div className="flex bg-white p-3 shadow-2xl rounded-full">
+          <div className="relative">
             <button
               onClick={() => setNavbar(!navbar)}
               data-collapse-toggle="navbar-cta"
               type="button"
-              className="inline-flex items-center w-10 h-10 justify-center text-sm focus:outline-none  text-gray-400 hover:bg-white/10 "
+              className="flex bg-white p-3 shadow-2xl rounded-full items-center justify-center text-sm focus:outline-none  text-gray-400 hover:bg-white/10 "
               aria-controls="navbar-cta"
               aria-expanded="false"
             >
@@ -58,7 +50,7 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-8 h-8"
                 >
                   <path
                     strokeLinecap="round"
@@ -73,7 +65,7 @@ export default function Navbar() {
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  className="w-6 h-6"
+                  className="w-8 h-8"
                 >
                   <path
                     strokeLinecap="round"
@@ -83,6 +75,19 @@ export default function Navbar() {
                 </svg>
               )}
             </button>
+            <div
+              className={`absolute p-4 bg-white shadow-xl rounded-2xl right-0 mt-3 ${
+                navbar ? "flex-col" : "hidden"
+              }`}
+            >
+              {routes.map((route) => (
+                <Link href={route.href}>
+                  <div className=" px-20 py-4 rounded-2xl bg-white hover:bg-gray-50">
+                    {route.label}
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </nav>
