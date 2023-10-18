@@ -13,7 +13,7 @@ const cards = [
     href: "/",
   },
   {
-    name: "yogaboskovice.cz",
+    name: "YOGA BOSKOVICE",
     description: "Yoga website. Get your yoga on! Enjoy the website :)",
     src: "/yoga-project.png",
     href: "/",
@@ -28,21 +28,21 @@ const cards = [
 
 export default function Card() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 p-4 md:p-0">
       {cards.map((card) => (
         <motion.div
           key={card.name}
           whileHover={{ scale: 1.02 }}
-          className=" overflow-hidden flex items-center content-center justify-center"
+          className=" overflow-hidden flex items-center content-center justify-center rounded-3xl"
         >
           <Link href={card.href}>
-            <div className=" max-w-4xl h-fit w-full bg-white rounded-3xl">
-              <div className="flex flex-col md:flex-row justify-between gap-4 overflow-hidden">
-                <div className="p-12 flex-col">
+            <div className=" max-w-4xl h-fit w-full bg-white rounded-xl">
+              <div className="flex flex-col md:flex-row justify-between gap-0 md:gap-4 overflow-hidden">
+                <div className="p-12 pl-16 md:pl-12 flex-col">
                   <h1 className="text-3xl font-bold text-gray-800">
                     {card.name}
                   </h1>
-                  <p className="pt-2 w-64 text-gray-600 text-lg tracking-tighter">
+                  <p className="pt-2 w-64 text-gray-600 text-base md:text-lg tracking-tighter">
                     {card.description}
                   </p>
                   <div className="pt-6">
