@@ -26,13 +26,13 @@ const badges = [
 export default function Badge() {
   return (
     <div className="flex justify-center">
-      <div className="flex max-w-lg flex-wrap gap-4 items-center content-center justify-center">
+      <div className="flex max-w-lg flex-wrap mt-6 md:mt-0 gap-4 items-center content-center justify-center">
         {badges.map((badge) => (
           <div
             key={badge.name}
             className="p-2 px-4 bg-white w-fit items-center rounded-full flex gap-2 shadow-md"
           >
-            <div className="relative w-6 h-6 ">
+            <div className="relative w-4 h-4 md:w-6 md:h-6 ">
               <Image
                 src={badge.src}
                 fill
@@ -40,7 +40,7 @@ export default function Badge() {
                 className="border-gray-700 rounded-full"
               />
             </div>
-            <p className=" text-gray-500">{badge.name}</p>
+            <p className="text-sm md:text-base text-gray-500">{badge.name}</p>
           </div>
         ))}
       </div>
