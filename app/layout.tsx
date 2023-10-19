@@ -7,13 +7,13 @@ import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://drie.cz/"),
+  metadataBase: new URL("https://swajp.drie.cz/"),
   title: "Miroslav Stejskal",
   description: "Doplnit.",
   openGraph: {
     title: "Miroslav Stejskal",
     description: "",
-    url: "https://drie.cz/",
+    url: "https://swajp.drie.cz/",
     siteName: "Miroslav Stejskal",
     images: [
       {

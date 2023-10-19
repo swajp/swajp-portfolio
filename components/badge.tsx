@@ -22,6 +22,26 @@ const badges = [
     name: "Clerk",
     src: "/badges/clerk.png",
   },
+  {
+    name: "TypeScript",
+    src: "/badges/typescript.svg",
+  },
+  {
+    name: "Framer Motion",
+    src: "/badges/framer-motion.svg",
+  },
+  {
+    name: "MongoDB",
+    src: "/badges/mongodb.svg",
+  },
+  {
+    name: "Docker",
+    src: "/badges/docker.svg",
+  },
+  {
+    name: "Sanity",
+    src: "/badges/sanity.svg",
+  },
 ];
 export default function Badge() {
   return (
@@ -32,12 +52,12 @@ export default function Badge() {
             key={badge.name}
             className="p-2 px-4 bg-white w-fit items-center rounded-full flex gap-2 shadow-md"
           >
-            <div className="relative w-4 h-4 md:w-6 md:h-6 ">
+            <div className="relative w-4 h-4 md:w-5 md:h-5 ">
               <Image
                 src={badge.src}
                 fill
                 alt={badge.name}
-                className="border-gray-700 rounded-full"
+                className="border-gray-700 "
               />
             </div>
             <p className="text-sm md:text-base text-gray-500">{badge.name}</p>
