@@ -7,7 +7,10 @@ import React from "react";
 export default function Connect() {
   return (
     <motion.div whileHover={{ scale: 1.02 }} className="flex justify-center  ">
-      <Link href="https://www.linkedin.com/in/miroslav-stejskal/">
+      <Link
+        target="blank"
+        href="https://www.linkedin.com/in/miroslav-stejskal/"
+      >
         <div className=" max-w-md w-fit rounded-full p-2 px-4 text-gray-500 hover:text-white stroke-gray-500 hover:stroke-white bg-white hover:bg-[#0077B5] transition-all">
           <div className="flex gap-1 text-center justify-center">
             <p className="">Connect with me on LinkedIn</p>

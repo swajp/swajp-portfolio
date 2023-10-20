@@ -72,7 +72,7 @@ export default function Footer() {
   return (
     <div className=" w-full p-6  flex justify-center content-center gap-2">
       {socials.map((social) => (
-        <Link key={social.href} href={social.href}>
+        <Link key={social.href} target="blank" href={social.href}>
           <motion.div
             whileHover={{ scale: 1.08 }}
             className="p-3 bg-white rounded-2xl"
