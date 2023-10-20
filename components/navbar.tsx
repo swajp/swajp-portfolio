@@ -123,6 +123,7 @@ export default function Navbar() {
             <motion.div
               animate={navbar ? "open" : "closed"}
               variants={variants}
+              initial={false}
               transition={{
                 type: "spring",
                 stiffness: 260,
@@ -133,7 +134,11 @@ export default function Navbar() {
                 className={`absolute p-4 bg-white shadow-xl rounded-2xl right-0 mt-3 `}
               >
                 {routes.map((route) => (
-                  <Link key={route.label} href={route.href}>
+                  <Link
+                    key={route.label}
+                    href={route.href}
+                    onClick={() => setNavbar(false)}
+                  >
                     <div className=" pr-24 pl-2 py-4 rounded-2xl bg-white hover:bg-gray-50 flex gap-2 ">
                       {route.svg}
                       <p className="text-gray-500 font-medium ">
