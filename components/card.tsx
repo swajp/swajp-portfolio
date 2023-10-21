@@ -8,21 +8,31 @@ import Link from "next/link";
 const cards = [
   {
     name: "DRIE",
-    description: "Cool website. Where you can seek for a web",
+    description:
+      "If you are looking for a modern website, you are at the right place. We will create a website that will be tailored to your needs.",
     src: "/drie-project.png",
-    href: "/",
+    href: "https://drie.cz",
+  },
+  {
+    name: "LoRa",
+    description:
+      "Are you interested in LoRaWAN technology? We started to offer this technology in the Czech Republic in Boskovice.",
+    src: "/lora-project.png",
+    href: "https://lora-peach.vercel.app/",
   },
   {
     name: "YOGA BOSKOVICE",
-    description: "Yoga website. Get your yoga on! Enjoy the website :)",
+    description:
+      "Website for yoga studio in Boskovice. Modern and clean design. Build with Wordpress.",
     src: "/yoga-project.png",
-    href: "/",
+    href: "https://yogaboskovice.cz",
   },
   {
     name: "WatchLater",
-    description: "Yoga website. Get your yoga on! Enjoy the website :)",
+    description:
+      "I am currently working on this project. Where you can save your favorite movies and series. AND! Share it with your friends.",
     src: "/watchlater-project.png",
-    href: "/",
+    href: "https://share-movie.vercel.app",
   },
 ];
 
@@ -35,7 +45,7 @@ export default function Card() {
           whileHover={{ scale: 1.02 }}
           className=" overflow-hidden flex items-center content-center justify-center rounded-3xl"
         >
-          <Link href={card.href}>
+          <Link target="blank" href={card.href}>
             <div className=" max-w-4xl h-fit w-full bg-white rounded-xl">
               <div className="flex flex-col md:flex-row justify-between gap-0 md:gap-4 overflow-hidden">
                 <div className="p-12 pl-16 md:pl-12 flex-col">
