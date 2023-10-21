@@ -14,6 +14,13 @@ const cards = [
     href: "https://drie.cz",
   },
   {
+    name: "DRIE - Blog",
+    description:
+      "We have created a blog where we share our knowledge. We write about web development, programming, and other interesting topics.",
+    src: "/blog-project.png",
+    href: "https://blog.drie.cz",
+  },
+  {
     name: "LoRa",
     description:
       "Are you interested in LoRaWAN technology? We started to offer this technology in the Czech Republic in Boskovice.",
@@ -80,7 +87,7 @@ export default function Card() {
                 </div>
                 <Image
                   src={card.src}
-                  alt="Drie.cz"
+                  alt={card.name}
                   width={430}
                   className="rounded-3xl"
                   height={300}
