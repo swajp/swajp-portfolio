@@ -42,6 +42,10 @@ const badges = [
     name: "Sanity",
     src: "/badges/sanity.svg",
   },
+  {
+    name: "Git",
+    src: "/badges/git.svg",
+  },
 ];
 export default function Badge() {
   return (
