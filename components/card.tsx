@@ -25,7 +25,7 @@ const cards = [
     description:
       "Are you interested in LoRaWAN technology? We started to offer this technology in the Czech Republic in Boskovice.",
     src: "/lora-project.png",
-    href: "https://lora-peach.vercel.app/",
+    href: "https://lora.drie.cz/",
   },
   {
     name: "YOGA BOSKOVICE",
