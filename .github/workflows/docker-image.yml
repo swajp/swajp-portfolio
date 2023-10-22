@@ -1,0 +1,19 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag registry.drie.cz/swajp-portfolio-web:latest
+    - name: Push the Docker image
+      run: docker login registry.drie.cz -u petrsvetr -p ${{ secrets.DOCKER_REGISTRY_PASSWROD }} && docker push registry.drie.cz/swajp-portfolio-web:latest
