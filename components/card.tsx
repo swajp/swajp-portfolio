@@ -21,6 +21,12 @@ const cards = [
     href: "https://blog.drie.cz",
   },
   {
+    name: "betterUML",
+    description: "Create effectively and easy class diagrams. ",
+    src: "/betteruml-project.png",
+    href: "https://better-uml.vercel.app/",
+  },
+  {
     name: "LoRa",
     description:
       "Are you interested in LoRaWAN technology? We started to offer this technology in the Czech Republic in Boskovice.",
