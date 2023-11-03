@@ -2,6 +2,7 @@ import Badges from "@/components/badge";
 import Card from "@/components/card";
 import Connect from "@/components/connect";
 import Mail from "@/components/mail";
+import Support from "@/components/support";
 import Title from "@/components/title";
 import React from "react";
 
@@ -12,10 +13,10 @@ export default function Home() {
       <Badges />
       <div className="flex flex-col gap-4">
         <Connect />
-
         <Mail />
       </div>
       <Card />
+      <Support />
     </div>
   );
 }

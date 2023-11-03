@@ -9,7 +9,8 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://swajp.drie.cz/"),
   title: "Miroslav Stejskal",
-  description: "Doplnit.",
+  description:
+    "My porfolio website where you can find my projects and other links.",
   openGraph: {
     title: "Miroslav Stejskal",
     description: "",
@@ -17,15 +18,16 @@ export const metadata: Metadata = {
     siteName: "Miroslav Stejskal",
     images: [
       {
-        url: "/example.jpg",
+        url: "/example.png",
         width: 800,
         height: 600,
+        alt: "My porfolio website where you can find my projects and other links.",
       },
       {
-        url: "/example.jpg",
+        url: "/example.png",
         width: 1800,
         height: 1600,
-        alt: "Doplnit.",
+        alt: "My porfolio website where you can find my projects and other links.",
       },
     ],
     locale: "cs_CZ",
