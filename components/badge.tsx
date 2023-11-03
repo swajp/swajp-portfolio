@@ -46,6 +46,10 @@ const badges = [
     name: "Git",
     src: "/badges/git.svg",
   },
+  {
+    name: "Convex",
+    src: "/badges/convex.png",
+  },
 ];
 export default function Badge() {
   return (
