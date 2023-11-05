@@ -7,18 +7,11 @@ import Link from "next/link";
 
 const cards = [
   {
-    name: "DRIE",
+    name: "my-story",
     description:
-      "If you are looking for a modern website, you are at the right place. We will create a website that will be tailored to your needs.",
-    src: "/drie-project.png",
-    href: "https://drie.cz",
-  },
-  {
-    name: "DRIE - Blog",
-    description:
-      "We have created a blog where we share our knowledge. We write about web development, programming, and other interesting topics.",
-    src: "/blog-project.png",
-    href: "https://blog.drie.cz",
+      "You can write short stories and share them with your friends. You can also read stories from other people. And like them.",
+    src: "/mystory-project.png",
+    href: "https://story-sharing-app-nu.vercel.app/stories",
   },
   {
     name: "betterUML",
@@ -32,6 +25,20 @@ const cards = [
       "Are you interested in LoRaWAN technology? We started to offer this technology in the Czech Republic in Boskovice.",
     src: "/lora-project.png",
     href: "https://lora.drie.cz/",
+  },
+  {
+    name: "DRIE",
+    description:
+      "If you are looking for a modern website, you are at the right place. We will create a website that will be tailored to your needs.",
+    src: "/drie-project.png",
+    href: "https://drie.cz",
+  },
+  {
+    name: "DRIE - Blog",
+    description:
+      "We have created a blog where we share our knowledge. We write about web development, programming, and other interesting topics.",
+    src: "/blog-project.png",
+    href: "https://blog.drie.cz",
   },
   {
     name: "YOGA BOSKOVICE",
