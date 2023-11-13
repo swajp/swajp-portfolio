@@ -14,6 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag driecz.azurecr.io/swajp-portfolio-web:latest
+      run: docker build . --file Dockerfile --tag registry.drie.cz/swajp-portfolio-web:latest
     - name: Push the Docker image
-      run: docker login driecz.azurecr.io -u driecz -p ${{ secrets.DOCKER_REGISTRY_PASSWORD }} && docker push driecz.azurecr.io/swajp-portfolio-web:latest
+      run: docker login registry.drie.cz -u driecz -p ${{ secrets.DOCKER_REGISTRY_PASSWORD }} && docker push registry.drie.cz/swajp-portfolio-web:latest
