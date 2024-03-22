@@ -34,13 +34,6 @@ const cards = [
     href: "https://drie.cz",
   },
   {
-    name: "DRIE - Blog",
-    description:
-      "We have created a blog where we share our knowledge. We write about web development, programming, and other interesting topics.",
-    src: "/blog-project.png",
-    href: "https://blog.drie.cz",
-  },
-  {
     name: "YOGA BOSKOVICE",
     description:
       "Website for yoga studio in Boskovice. Modern and clean design. Build with Wordpress.",
@@ -63,6 +56,7 @@ export default function Card() {
         <motion.a
           target="blank"
           key={card.name}
+          whileHover={{ scale: 1.02 }}
           className=" w-full sm:max-w-3xl rounded-3xl mx-auto bg-white"
           href={card.href}
         >
