@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
+import Support from "./support";
 
 const socials = [
   {
@@ -69,17 +70,11 @@ const socials = [
 
 export default function Footer() {
   return (
-    <div className=" w-full p-6  flex justify-center content-center gap-2">
-      {socials.map((social) => (
-        <Link key={social.href} target="blank" href={social.href}>
-          <motion.div
-            whileHover={{ scale: 1.08 }}
-            className="p-3 bg-white rounded-2xl"
-          >
-            {social.svg}
-          </motion.div>
-        </Link>
-      ))}
-    </div>
+    <footer className="mx-auto w-full px-4 py-12 sm:py-16">
+      <div className="rounded-2xl bg-white py-6 px-12 flex items-center justify-between">
+        <p>© 2024 swajp</p>
+        <Support />
+      </div>
+    </footer>
   );
 }
