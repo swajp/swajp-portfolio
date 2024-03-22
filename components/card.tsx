@@ -58,18 +58,15 @@ const cards = [
 
 export default function Card() {
   return (
-    <div className="flex flex-col gap-8 p-4">
+    <div className="flex flex-col gap-8 p-4 md:p-0">
       {cards.map((card) => (
-        <Link
+        <motion.a
           target="blank"
-          className="w-full rounded-3xl mx-auto bg-white"
+          key={card.name}
+          className=" w-full sm:max-w-3xl rounded-3xl mx-auto bg-white"
           href={card.href}
         >
-          <motion.div
-            key={card.name}
-            whileHover={{ scale: 1.02 }}
-            className=" overflow-hidden flex items-center content-center justify-center"
-          >
+          <div className=" overflow-hidden flex items-center content-center justify-center">
             <div className="flex flex-col sm:flex-row justify-between w-full gap-0 md:gap-4 overflow-hidden">
               <div className="p-12 pl-16 md:pl-12 flex-col">
                 <h1 className="text-3xl font-bold text-black">{card.name}</h1>
@@ -99,16 +96,19 @@ export default function Card() {
                   </motion.div>
                 </div>
               </div>
-              <Image
-                src={card.src}
-                alt={card.name}
-                width={430}
-                className="rounded-3xl"
-                height={300}
-              />
+              <div className="flex justify-end">
+                <Image
+                  quality={100}
+                  src={card.src}
+                  alt={card.name}
+                  width={407}
+                  className="rounded-3xl"
+                  height={319}
+                />
+              </div>
             </div>
-          </motion.div>
-        </Link>
+          </div>
+        </motion.a>
       ))}
     </div>
   );
