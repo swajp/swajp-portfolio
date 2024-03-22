@@ -70,7 +70,7 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="mx-auto w-full px-4 py-12 sm:py-16">
+    <footer className="mx-auto max-w-3xl px-4 md:px-0 py-12 sm:py-16">
       <div className="rounded-2xl bg-white py-6 px-12 flex items-center justify-between">
         <p>© 2024 swajp</p>
         <Support />
