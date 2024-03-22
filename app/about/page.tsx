@@ -7,7 +7,7 @@ export default function AboutPage() {
       <div className="max-w-3xl p-4 md:p-0">
         <div className="mt-4 md:mt-6 gap-2 flex">
           <div className="flex flex-col gap-3">
-            <h1 className=" text-4xl md:text-5xl font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-gray-400  to-gray-900">
+            <h1 className=" text-4xl md:text-5xl pb-1 font-bold tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-gray-400  to-gray-900">
               Something about me.
             </h1>
             <div className="flex flex-col gap-4">
